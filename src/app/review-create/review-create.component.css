@@ -1,0 +1,12 @@
+
+
+.form-container{
+    padding-top:100px;
+    margin: 100px;
+   
+}
+
+.margin-left mat-radio-button:not(:first-child){
+    margin-left:30px;
+}
+

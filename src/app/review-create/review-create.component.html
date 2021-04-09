@@ -1,0 +1,147 @@
+<!-- <h1>Create Review</h1>
+<div class="container">
+    <div class="row">
+       <div class="col-sx-12 col-sm-10 col-md-8 col-sm-offset-2">
+           <mat-form-field [formGroup]="createReviewForm" (ngSubmit)="onSubmit()">  -->
+               <!-- By Databinding this should sync to the ts here and get rid of error
+            this is also where im adding the submit method -->
+               <!-- <div class="form-group">
+                   <label for="datepicker">Select Date</label>
+                   <input
+                    type="text"
+                    id="datepicker"
+                    formControlName="datepicker"
+                    class="form-control">
+               </div>
+
+               <div class="form-group">
+                <label for="nameofbusiness">Name Of Business</label>
+                <input
+                 type="text"
+                 id="nameofbusiness"
+                 formControlName="nameofbusiness"
+                 class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="beveragename">Beverage Type</label> -->
+
+                <!-- For tying it in with the search feature, do we give them a list of options and we can use those values to search by on the search feature? -->
+
+                <!-- <input
+                 type="text"
+                 id="beveragename"
+                 formControlName="beveragename"
+                 class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="atmosphere">Describe The Vibe</label>
+                <input
+                 type="text"
+                 id="atmosphere"
+                 formControlName="atmosphere"
+                 class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="overallrating">Overall Rating</label>
+                <input
+                 type="text"
+                 id="overallrating"
+                 formControlName="overallrating"
+                 class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="summary">Final Thoughts</label>
+                <input
+                 type="text"
+                 id="summary"
+                 formControlName="summary"
+                 class="form-control"> -->
+            <!-- </div>
+           </mat-form-field>
+       </div>
+
+    </div>
+</div> -->
+
+<form [formGroup]="createReviewForm"class="form-container"> 
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                Create Your Review
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="row">
+                <div class="text-center col-md-6">
+                    <mat-form-field>
+                        <input formControlName="datepicker" matInput [matDatepicker]="picker" placeholder="Choose a date">
+                    
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                      <!-- <mat-form-field>
+                        <input formControlName="nameOfBusiness" matInput placeholder="Name of Business" />
+                    </mat-form-field> -->
+
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field>
+                        <input formControlName="nameOfBusiness" matInput placeholder="Name of Business">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-center col-md-6">
+                    <mat-form-field class="full-width">
+                        <input formControlName="beverageName" matInput placeholder="Beverage Type">
+                    </mat-form-field>
+                </div>
+                <div class="text-center col-md-6">    
+                    <mat-form-field class="full-width">
+                        <input formControlName="atmosphere" matInput placeholder="Atmosphere">
+                    </mat-form-field>
+                </div>  
+            </div>
+            <!-- <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field>
+                        <input formControlName="atmosphere" matInput placeholder="Atmosphere" />
+                    </mat-form-field>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field>
+                        <input formControlName="overallRating" matInput placeholder="Overallrating" />
+                    </mat-form-field>
+                    <!-- <mat-form-field>
+                        <textarea formControlName="summary" matInput placeholder="Final Thoughts"></textarea>
+                    </mat-form-field> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field>
+                        <textarea formControlName="summary" matInput placeholder="Final Thoughts"></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+
+
+        </mat-card-content>
+        <mat-card-actions>
+            <button (click)="saveForm()" color="primary" mat-raised-button>
+                Save
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</form>
