@@ -21,7 +21,9 @@ export class ReviewCreateComponent implements OnInit {
   })
 
 saveForm(){
-  console.log('Form data is ', this.createReviewForm.value);
+  console.log('Form data is ', this.createReviewForm.value); 
+
+  // this.createReviewForm.value.starReviewvalue
 }
 
   ngOnInit(): void {

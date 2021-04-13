@@ -67,7 +67,7 @@
     </div>
 </div> -->
 
-<form [formGroup]="createReviewForm"class="form-container"> 
+<form [formGroup]="createReviewForm" class="form-container"> 
     <mat-card>
         <mat-card-header>
             <mat-card-title>
@@ -91,7 +91,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6">
+                <div>
                     <mat-form-field>
                         <input formControlName="nameOfBusiness" matInput placeholder="Name of Business">
                     </mat-form-field>
@@ -100,26 +100,50 @@
             <div class="row">
                 <div class="text-center col-md-6">
                     <mat-form-field class="full-width">
-                        <input formControlName="beverageName" matInput placeholder="Beverage Type">
-                    </mat-form-field>
+                        <mat-label>Select Your Beverage</mat-label>
+                        <mat-select formControlName="beverageName" id="beverageName" >
+                            <mat-option value="hotcoffee">Hot Coffee</mat-option>
+                            <mat-option value="icedcoffee">Iced Coffee</mat-option>
+                            <mat-option value="coldbrew">Cold Brew</mat-option>
+                            <mat-option value="latte">Latte</mat-option>
+                            <mat-option value="americano">Americano</mat-option>
+                            <mat-option value="espresso">Espresso</mat-option>
+                            <mat-option value="machiato">Machiato</mat-option>
+                            <mat-option value="frappucino">Frappucino</mat-option>
+                            <mat-option value="tea">Tea</mat-option>
+                            <mat-option value="Other">Other</mat-option>
+                        
+                        </mat-select>
+                
+                    </mat-form-field> 
                 </div>
                 <div class="text-center col-md-6">    
                     <mat-form-field class="full-width">
-                        <input formControlName="atmosphere" matInput placeholder="Atmosphere">
-                    </mat-form-field>
+                        <mat-label>Describe The Atmosphere</mat-label>
+                        <mat-select formControlName="atmosphere" id="atmosphere" multiple >
+                            <mat-option value="Industrial">Industrial</mat-option>
+                            <mat-option value="Rustic">Rustic</mat-option>
+                            <mat-option value="Chic">Chic</mat-option>
+                            <mat-option value="Cottage-Core">Cottage-Core</mat-option>
+                            <mat-option value="Loud">Loud</mat-option>
+                            <mat-option value="Busy">Busy</mat-option>
+                            <mat-option value="Quiet">Quiet</mat-option>
+                        </mat-select>
+                    </mat-form-field> 
                 </div>  
             </div>
-            <!-- <div class="row">
+             <div class="row">
                 <div class="col-sm-6">
                     <mat-form-field>
                         <input formControlName="atmosphere" matInput placeholder="Atmosphere" />
                     </mat-form-field>
                 </div>
-            </div> -->
+            </div> 
             <div class="row">
                 <div class="col-md-6">
                     <mat-form-field>
-                        <input formControlName="overallRating" matInput placeholder="Overallrating" />
+                        <input formControlName="overallRating" matInput placeholder="Overall Rating" />
+                        <app-star-rating></app-star-rating> 
                     </mat-form-field>
                     <!-- <mat-form-field>
                         <textarea formControlName="summary" matInput placeholder="Final Thoughts"></textarea>
@@ -140,7 +164,7 @@
         </mat-card-content>
         <mat-card-actions>
             <button (click)="saveForm()" color="primary" mat-raised-button>
-                Save
+                Save Review
             </button>
         </mat-card-actions>
     </mat-card>

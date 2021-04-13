@@ -19,7 +19,11 @@ import { ReviewInspectIndividualComponent } from './review-inspect-individual/re
 import { ReviewCreateComponent } from './review-create/review-create.component';
 import { ReviewLibraryComponent } from './review-library/review-library.component';
 import { SearchFeatureComponent } from './search-feature/search-feature.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule,  } from '@angular/forms';
+
+
+// import { ControlValueAccessorModule } from '@angular/forms';
+
 // import { HttpModule } from '@angular/http';
 // import {} from '@angular/forms'
 import { AppComponent } from './app.component';
@@ -50,7 +54,8 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
     MatNativeDateModule,
     MatSnackBarModule,
     // HttpModule
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    // ControlValueAccessorModule,
   ],
   exports: [
     MatIconModule,
