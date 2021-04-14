@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatChipsModule } from '@angular/material/chips';
 
 
 import { NavbarComponent } from './navbar/navbar.component';
@@ -44,6 +45,7 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatChipsModule,
     MatButtonModule,
     MatIconModule,
     MatCardModule,

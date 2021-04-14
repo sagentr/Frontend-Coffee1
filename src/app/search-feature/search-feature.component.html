@@ -1,1 +1,41 @@
-<p>search-feature works!</p>
+<form [formGroup]="searchForm" class="form-container"> 
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                Search For Your Next Cup
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field>
+                <mat-chip-list selectable multiple [formControl]="chipsControl">
+                    <mat-chip #chip="matChip" (click)="chip.toggleSelected()"
+                        *ngFor="let option of ['Hot Coffee', 'Iced Coffee', 'Latte', 'Americano', 'Machiato', 'Tea', 'Industrial', 
+                        'Rustic', 'Chic', 'Cottage-Core', 'Loud', 'Busy', 'Quiet', 'Cozy', 'Artistic', 'Environmentally Friendly' ]">
+                        {{option}}
+                    </mat-chip>
+                </mat-chip-list>
+            </mat-form-field>
+        <!-- <mat-form-field>
+            <mat-chip-list selectable multiple [formControl]="chipsControl">
+                <mat-chip #chip="matChip" (click)="chip.toggleSelected()"
+                    *ngFor="let option of ['Option 1', 'Option 2', 'Option 3']">
+                    {{option}}
+                </mat-chip>
+            </mat-chip-list>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-chip-list selectable multiple [formControl]="chipsControl">
+                <mat-chip #chip="matChip" (click)="chip.toggleSelected()"
+                    *ngFor="let option of ['Option 1', 'Option 2', 'Option 3']">
+                    {{option}}
+                </mat-chip>
+            </mat-chip-list>
+        </mat-form-field> -->
+        </mat-card-content>
+        <mat-card-actions>
+            <button (click)="saveForm()" color="primary" mat-raised-button>
+                Search Now
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</form>
