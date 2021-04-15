@@ -27,8 +27,8 @@ export class StarRatingComponent implements OnInit {
 
 
   constructor(
-    private snackBar: MatSnackBar,
-    private reviewCreate: ReviewCreateComponent
+    public snackBar: MatSnackBar,
+    public reviewCreate: ReviewCreateComponent
   ) {
     //default to no rating - all stars are empty
     this.ratingArr = Array(this.starCount).fill(false);

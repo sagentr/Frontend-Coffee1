@@ -17,17 +17,13 @@ import { MatChipsModule } from '@angular/material/chips';
 
 
 import { ReviewCreateComponent } from './review-create/review-create.component';
-
+import { ReviewLibraryComponent } from './review-create/review-library.component';
 import { SearchFeatureComponent } from './search-feature/search-feature.component';
 import { ReactiveFormsModule,  } from '@angular/forms';
-
-
-// import { ControlValueAccessorModule } from '@angular/forms';
-
 import { HttpClientModule } from '@angular/common/http';
-// import {} from '@angular/forms'
 import { AppComponent } from './app.component';
 import { StarRatingComponent } from './star-rating/star-rating.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -36,9 +32,11 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
     ReviewCreateComponent,
     SearchFeatureComponent,
     StarRatingComponent,
+    ReviewLibraryComponent,
 
   ],
   imports: [
+    AppRoutingModule,
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -52,9 +50,7 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSnackBarModule,
-    // HttpModule
     ReactiveFormsModule,
-    // ControlValueAccessorModule,
   ],
   exports: [
     MatIconModule,
