@@ -7,27 +7,25 @@ import { FormBuilder, Validators, FormControl, FormGroup  } from '@angular/forms
   templateUrl: './search-feature.component.html',
   styleUrls: ['./search-feature.component.css']
 })
-export class SearchFeatureComponent implements OnInit {
+export class SearchFeatureComponent {
   
 
   // name = 'Angular ' + VERSION.major;
 
   // chipsControl = new FormControl('');
   // chipsValue$ = this.chipsControl.valueChanges;
-  chipsControl = new FormControl('');
-  constructor(private formBuilder:FormBuilder) { }
+    chipsControl = new FormControl('');
+    chipsValue$ = this.chipsControl.valueChanges;
 
-  searchForm = this.formBuilder.group({
-    
-    chipsValue$ : this.chipsControl.valueChanges
-  })
+    onSubmit() {
+      console.log(this.chipsControl)
+    }
+   
 
-  ngOnInit(): void {
-  }
 
-  saveForm(){
-    console.log('Search request is ', this.searchForm.value)
-  }
+  // saveForm(){
+  //   console.log('Search request is ', this.searchForm.value)
+  // }
 
 }
 
