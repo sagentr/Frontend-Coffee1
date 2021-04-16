@@ -23,7 +23,7 @@ export class ReviewLibraryComponent implements OnInit {
 }
 
 
-//let mock data = {
+//let mockdata = {
 // id: 1,
 // datePicker: 'Thu Apr 22 2021 00:00:00 GMT-0500 (Central Daylight Time)',
 // nameOfBusiness: 'Panera',

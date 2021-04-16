@@ -38,4 +38,39 @@
             </button>
         </mat-card-actions>
     </mat-card>
+
+    <div>
+        <h2 *ngIf="reviews.length === 0; else searchResults">See Reviews Below</h2>
+        <ng-template #searchResults>
+
+            <div *ngFor="let review of reviews">
+                <h2>Business Name</h2>
+                <p> {{ review.nameOfBusiness }}</p>
+            
+                <h2>Beverage Type</h2>
+                    <ul>
+                        <li *ngFor="let beverageName of review.beverageName">
+                            {{ beverageName }}
+                        </li>
+                    </ul>
+              
+                <h2>Atmosphere</h2>
+                    <ul>
+                        <li *ngFor="let atmosphere of review.atmosphere">
+                            {{ atmosphere }}
+                        </li>
+                    </ul>
+            
+            
+                <h2>Date Of Visit</h2>
+                <p> {{ review.datePicker | date: "fullDate" }}</p>
+            
+                <h2>Summary Of Visit</h2>
+                <p> {{ review.summary }}</p>
+            
+                </div>
+
+        </ng-template>
+
+    </div>
 <!-- </form> -->
