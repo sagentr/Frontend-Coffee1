@@ -12,34 +12,35 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatChipsModule } from '@angular/material/chips';
 
 
-import { NavbarComponent } from './navbar/navbar.component';
-import { ReviewInspectIndividualComponent } from './review-inspect-individual/review-inspect-individual.component';
+
 import { ReviewCreateComponent } from './review-create/review-create.component';
-import { ReviewLibraryComponent } from './review-library/review-library.component';
+import { ReviewLibraryComponent } from './review-create/review-library.component';
 import { SearchFeatureComponent } from './search-feature/search-feature.component';
-import { ReactiveFormsModule } from '@angular/forms';
-// import { HttpModule } from '@angular/http';
-// import {} from '@angular/forms'
+import { ReactiveFormsModule,  } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { StarRatingComponent } from './star-rating/star-rating.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    ReviewInspectIndividualComponent,
     ReviewCreateComponent,
-    ReviewLibraryComponent,
     SearchFeatureComponent,
     StarRatingComponent,
+    ReviewLibraryComponent,
 
   ],
   imports: [
+    AppRoutingModule,
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
+    MatChipsModule,
     MatButtonModule,
     MatIconModule,
     MatCardModule,
@@ -49,8 +50,7 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSnackBarModule,
-    // HttpModule
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports: [
     MatIconModule,

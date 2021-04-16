@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ReviewCreateComponent } from '../review-create/review-create.component'
+
 
 
 @Component({
-  selector: 'app-star-rating',
+  selector: 'app-star-rating', 
   templateUrl: './star-rating.component.html',
   styleUrls: ['./star-rating.component.css']
 })
@@ -12,7 +14,7 @@ export class StarRatingComponent implements OnInit {
 
   rating = 0;
   starCount = 5;
-  ratingArr: boolean[] = []; //true = solid star; flase = empty star
+  ratingArr: boolean[] = []; //true = solid star; false = empty star
 
   snackBarDuration = 2000;
   response = [
@@ -23,14 +25,18 @@ export class StarRatingComponent implements OnInit {
     'Excellent!'
   ]
 
+
   constructor(
-    private snackBar: MatSnackBar
+    public snackBar: MatSnackBar,
+    public reviewCreate: ReviewCreateComponent
   ) {
     //default to no rating - all stars are empty
     this.ratingArr = Array(this.starCount).fill(false);
    }
 
   ngOnInit(): void {
+
+    console.log(this.reviewCreate.createReviewForm);
   }
 
   returnStar(i: number) { //accepts index of star, 0-4
@@ -39,6 +45,7 @@ export class StarRatingComponent implements OnInit {
     } else {
       return 'star_border';
     }
+    console.log(this.ratingArr.length)
   }
 
   onClick(i: number) {    //onclick method, activates showing the snackbar according to click
@@ -47,6 +54,9 @@ export class StarRatingComponent implements OnInit {
       duration: this.snackBarDuration,
       panelClass: ['snack-bar']
     });
+    
   }
 
 }
+
+
