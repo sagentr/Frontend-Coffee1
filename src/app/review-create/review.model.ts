@@ -2,16 +2,16 @@
 
 export class Review {
     public id: number;
-    public datePicker:  string;
+    public dateOfVisit:  string;
     public nameOfBusiness: string;
     public beverageName: string[];
     public atmosphere: string[];
-    public overallRating: number;
+    public overallRating: string[];
     public summary: string;
 
-    constructor (id: number, datePicker: string, nameOfBusiness: string, beverageName: string[], atmosphere: string[], overallRating: number, summary: string) {
+    constructor (id: number, dateOfVisit: string, nameOfBusiness: string, beverageName: string[], atmosphere: string[], overallRating: string[], summary: string) {
      this.id = id;
-     this.datePicker =  datePicker;
+     this.dateOfVisit =  dateOfVisit;
      this.nameOfBusiness = nameOfBusiness;
      this.beverageName = beverageName;
      this.atmosphere = atmosphere;
