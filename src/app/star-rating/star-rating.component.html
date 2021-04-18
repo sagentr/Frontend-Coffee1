@@ -1,9 +1,0 @@
-
-<!-- Display an array of star/star_border buttons -->
-
-<button mat-icon-button color="primary" *ngFor="let r of ratingArr; index as i"
-    (click)="onClick(i)">
-    <mat-icon>
-        {{ returnStar(i) }}
-    </mat-icon>
-</button>

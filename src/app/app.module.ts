@@ -22,7 +22,6 @@ import { SearchFeatureComponent } from './search-feature/search-feature.componen
 import { ReactiveFormsModule,  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { StarRatingComponent } from './star-rating/star-rating.component';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -31,7 +30,6 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     ReviewCreateComponent,
     SearchFeatureComponent,
-    StarRatingComponent,
     ReviewLibraryComponent,
 
   ],
