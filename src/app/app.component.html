@@ -1,5 +1,26 @@
-<!-- <app-review-create></app-review-create>
- <app-star-rating></app-star-rating> -->
-<!-- <app-search-feature></app-search-feature>
-<app-review-library></app-review-library>  -->
+
+<div class="nav-menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger">
+      <div></div>
+  </div>
+    <div class="nav-menu">
+        <div>
+            <div>
+                <ul>
+                <li><a [routerLink]="''">Home</a></li>
+                <li><a [routerLink]="['/profile']">Profile</a></li>
+                <li><a routerLink="/stlcoffee">StL Coffee</a></li>
+                <li><a routerLink="/reviews">Reviews</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+  <header class="showcase">
+    <div class="container showcase-inner">
+      <h1>Coffee Commune</h1>
+      <p>Join the St. Louis coffee community</p>
+    </div>
+  </header>
 <router-outlet></router-outlet>

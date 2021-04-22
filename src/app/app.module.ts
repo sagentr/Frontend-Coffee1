@@ -13,6 +13,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatChipsModule } from '@angular/material/chips';
+import { AgmCoreModule } from '@agm/core';
 
 
 
@@ -23,6 +24,9 @@ import { ReactiveFormsModule,  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ProfileComponent } from './profile/profile.component';
+import { MapComponent } from './map/map.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -31,6 +35,9 @@ import { AppRoutingModule } from './app-routing.module';
     ReviewCreateComponent,
     SearchFeatureComponent,
     ReviewLibraryComponent,
+    ProfileComponent,
+    MapComponent,
+    HomeComponent,
 
   ],
   imports: [
@@ -49,6 +56,10 @@ import { AppRoutingModule } from './app-routing.module';
     MatNativeDateModule,
     MatSnackBarModule,
     ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAcUSugiFf5ZW-JTnDERKVuKDUdfqbvj9Y',
+      libraries: ['places']
+    })
   ],
   exports: [
     MatIconModule,
