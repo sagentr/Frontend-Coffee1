@@ -27,6 +27,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProfileComponent } from './profile/profile.component';
 import { MapComponent } from './map/map.component';
 import { HomeComponent } from './home/home.component';
+import { PublicReviewsComponent } from './public-reviews/public-reviews.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { HomeComponent } from './home/home.component';
     ProfileComponent,
     MapComponent,
     HomeComponent,
+    PublicReviewsComponent,
 
   ],
   imports: [

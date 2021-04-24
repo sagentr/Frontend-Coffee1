@@ -1,4 +1,4 @@
-h4 {
+h2 {
     text-align: center;
 }
 
@@ -12,4 +12,13 @@ hr {
         width: 50%;
         margin-left: auto;
         margin-right: auto;
+}
+
+.row {
+    display: flex;
+}
+
+.col-xs-4 {
+    flex: 33.33%;
+  padding: 5px;
 }
