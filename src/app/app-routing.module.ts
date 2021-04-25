@@ -6,6 +6,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ReviewCreateComponent } from './review-create/review-create.component';
 import { ReviewLibraryComponent } from './review-create/review-library.component';
 import { SearchFeatureComponent } from './search-feature/search-feature.component';
+import { LoginComponent } from './login/login.component';
 
 // import { StlCoffeeComponent } from './stl-coffee/stl-coffee.component';
 
@@ -15,7 +16,9 @@ const routes: Routes = [
   // {path: 'stlcoffee', component: StlCoffeeComponent},
   {path: 'reviews', component: ReviewCreateComponent},
   {path: 'reviewlibrary', component: ReviewLibraryComponent},
-  {path: 'searchfeature', component: SearchFeatureComponent}
+  {path: 'searchfeature', component: SearchFeatureComponent},
+  {path: 'login', component: LoginComponent}
+
 ];
 
 @NgModule({

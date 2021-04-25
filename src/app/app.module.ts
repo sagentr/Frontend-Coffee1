@@ -28,6 +28,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { MapComponent } from './map/map.component';
 import { HomeComponent } from './home/home.component';
 import { PublicReviewsComponent } from './public-reviews/public-reviews.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { PublicReviewsComponent } from './public-reviews/public-reviews.componen
     MapComponent,
     HomeComponent,
     PublicReviewsComponent,
+    LoginComponent,
 
   ],
   imports: [
