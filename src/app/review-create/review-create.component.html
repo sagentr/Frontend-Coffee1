@@ -7,9 +7,8 @@
         </mat-card-header>
         <mat-card-content>
             <div class="row">
-                <div class="text-center col-md-6">
+                
                     <mat-form-field>          
-                        <!-- what type of data is this, string or date  -->
                         <input
                         type="string" 
                         formControlName="dateOfVisit" 
@@ -18,7 +17,7 @@
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
                       </mat-form-field>
-                </div>
+                
             </div>
             <div class="row">
                 <div>
@@ -35,7 +34,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="text-center col-md-6">
+                
                     <mat-form-field class="full-width">
                         <mat-label>Select Your Beverage</mat-label>
                         <mat-select formControlName="beverageName" 
@@ -60,11 +59,11 @@
                 
                     </mat-form-field> 
                 </div>
-                <div class="text-center col-md-6">    
+                <div class="row">    
                     <mat-form-field class="full-width">
                         <mat-label>Describe The Atmosphere</mat-label>
                         <mat-select formControlName="atmosphere" id="atmosphere" multiple >
-                            <mat-option value="Industrial">I   ndustrial</mat-option>
+                            <mat-option value="Industrial">Industrial</mat-option>
                             <mat-option value="Rustic">Rustic</mat-option>
                             <mat-option value="Chic">Chic</mat-option>
                             <mat-option value="Cottage-Core">Cottage-Core</mat-option>
@@ -75,29 +74,28 @@
                         </mat-select>
                     </mat-form-field> 
                 </div>  
-            </div>
+           
             <div class="row">
-                <div class="col-md-6">
+                
                     <mat-form-field class="full-width">
                         <mat-label>Overall, How was the drink?</mat-label>
                         <mat-select formControlName="overallRating" 
                         id="OverallRating" >
                         <!-- What did Nikki name these values? -->
-                            <mat-option value="theWorst">The Worst!</mat-option>
-                            <mat-option value="notCompletelyHorrible">Not Completely Horrible</mat-option>
-                            <mat-option value="eh">Ehhh</mat-option>
-                            <mat-option value="prettyGood">Pretty Good!</mat-option>
-                            <mat-option value="amazing">Amazing!</mat-option>
+                            <mat-option value="theWorst" id="i1">The Worst!</mat-option>
+                            <mat-option value="notCompletelyHorrible" id="i2">Not Completely Horrible</mat-option>
+                            <mat-option value="eh" id="i3">Ehhh</mat-option>
+                            <mat-option value="prettyGood" id="i4">Pretty Good!</mat-option>
+                            <mat-option value="amazing" id="i5">Amazing!</mat-option>
                         </mat-select>
                     </mat-form-field>  
-                </div>
+                
             </div>
             <div class="row">
-                <div class="col-sm-6">
                     <mat-form-field>
                         <textarea formControlName="summary" matInput placeholder="Final Thoughts"></textarea>
                     </mat-form-field>
-                </div>
+
             </div>
 
 
@@ -107,9 +105,12 @@
         <mat-card-actions>
             <button color="primary"
             type="submit"
+            (click)="opensweetalert()"
             mat-raised-button>
                 Save Review
             </button>
         </mat-card-actions>
     </mat-card>
 </form>
+<br>
+<br>
