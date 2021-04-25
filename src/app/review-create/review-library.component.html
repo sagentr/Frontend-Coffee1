@@ -1,38 +1,42 @@
-<div class="row">
-    <div class="col-xs-12">
- <h1>My Reviews</h1>
- <div *ngFor="let review of reviews">
-    <h2>Business Name</h2>
-    <p> {{ review.nameOfBusiness }}</p>
+<div class="container">
+    <div class="row mb-1">
+        <div class="col-xs-4">
+            <h1>My Reviews</h1>
+            <div *ngFor="let review of reviews">
+                <h2>Business Name</h2>
+                <p> {{ review.nameOfBusiness }}</p>
 
-    <h2>Beverage Type</h2>
-        <ul>
-            <li *ngFor="let beverageName of review.beverageName">
-                {{ beverageName }}
-            </li>
-        </ul>
-  
-    <h2>Atmosphere</h2>
-        <ul>
-            <li *ngFor="let atmosphere of review.atmosphere">
-                {{ atmosphere }}
-            </li>
-        </ul>
+                <h2>Beverage Type</h2>
+                <ul>
+                    <li *ngFor="let beverageName of review.beverageName">
+                        {{ beverageName }}
+                    </li>
+                </ul>
+        
+                <h2>Atmosphere</h2>
+                <ul>
+                    <li *ngFor="let atmosphere of review.atmosphere">
+                        {{ atmosphere }}
+                    </li>
+                </ul>
 
-        <h2>Overall I'd say it was...</h2>
-        <ul>
-            <li *ngFor="let overallRating of review.overallRating">
-                {{ overallRating }}
-            </li>
-        </ul>
+                <h2>Overall I'd say it was...</h2>
+                <ul>
+                    <li *ngFor="let overallRating of review.overallRating">
+                        {{ overallRating }}
+                    </li>
+                </ul>
 
-    <h2>Date Of Visit</h2>
-    <p> {{ review.dateOfVisit | date: "fullDate" }}</p>
+                <h2>Date Of Visit</h2>
+                <p> {{ review.dateOfVisit | date: "fullDate" }}</p>
 
-    <h2>Summary Of Visit</h2>
-    <p> {{ review.summary }}</p>
-
+                <h2>Summary Of Visit</h2>
+                <p> {{ review.summary }}</p>
+            </div>
+        </div>
     </div>
 </div>
-   
+<br><br>
+
+
        
