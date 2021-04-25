@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AgmCoreModule } from '@agm/core';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,6 +24,10 @@ import { ReactiveFormsModule,  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ProfileComponent } from './profile/profile.component';
+import { MapComponent } from './map/map.component';
+import { HomeComponent } from './home/home.component';
+import { PublicReviewsComponent } from './public-reviews/public-reviews.component';
 
 
 @NgModule({
@@ -31,6 +36,10 @@ import { AppRoutingModule } from './app-routing.module';
     ReviewCreateComponent,
     SearchFeatureComponent,
     ReviewLibraryComponent,
+    ProfileComponent,
+    MapComponent,
+    HomeComponent,
+    PublicReviewsComponent,
 
   ],
   imports: [
@@ -49,6 +58,10 @@ import { AppRoutingModule } from './app-routing.module';
     MatNativeDateModule,
     MatSnackBarModule,
     ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAcUSugiFf5ZW-JTnDERKVuKDUdfqbvj9Y',
+      libraries: ['places']
+    })
   ],
   exports: [
     MatIconModule,

@@ -1,0 +1,24 @@
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+hr {
+        border-bottom: 12px solid rgb(15, 121, 20);
+        border-radius: 15px;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+.row {
+    display: flex;
+}
+
+.col-xs-4 {
+    flex: 33.33%;
+  padding: 5px;
+}
