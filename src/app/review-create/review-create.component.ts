@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormControl, FormGroup  } from '@angular/forms';
 import { Review } from './review.model';
 import { ReviewService } from './review.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-review-create',
@@ -36,6 +37,10 @@ export class ReviewCreateComponent implements OnInit {
     console.log(review)
     // console.log(this.createReviewForm);
     // This gives us access to the form 
+  }
+
+  opensweetalert(){
+    Swal.fire('Your Review has been saved')
   }
 
 
