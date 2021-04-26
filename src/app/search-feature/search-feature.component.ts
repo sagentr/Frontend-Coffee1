@@ -15,6 +15,7 @@ export interface Fruit {
 })
 export class SearchFeatureComponent implements OnInit {
   reviews: Review[] = []; 
+  searchForm: FormGroup;
   
   chipsControl: any;
 
@@ -57,6 +58,8 @@ export class SearchFeatureComponent implements OnInit {
 
     this.chipsControl = new FormControl('');
     // let chipsValue$ = this.chipsControl.valueChanges;
+
+    this.searchForm = new FormGroup({})
 
 
   }
