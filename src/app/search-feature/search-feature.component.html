@@ -9,28 +9,27 @@
             <!-- <mat-form-field> -->
                 <mat-chip-list selectable multiple [formControl]="chipsControl">
                     <mat-chip #chip="matChip" (click)="chip.toggleSelected(true)"
-                        *ngFor="let option of ['Hot Coffee', 'Iced Coffee', 'Latte', 'Americano', 'Machiato', 'Tea', 'Industrial', 
+                        *ngFor="let option of ['Drip Coffee', 'French Press/Pour-Over', 'Iced Coffee', 'Cold brew', 'Cappuccino', 'Cafe Au Lait', 'Flat White', 'Mocha', 'Matcha','Latte', 'Americano', 'Machiato', 'Tea', 'Industrial', 
                         'Rustic', 'Chic', 'Cottage-Core', 'Loud', 'Busy', 'Quiet', 'Cozy', 'Artistic', 'Environmentally Friendly']">
                         {{option}}
                     </mat-chip>
                 </mat-chip-list>
-            <!-- </mat-form-field> -->
-        <!-- <mat-form-field>
-            <mat-chip-list selectable multiple [formControl]="chipsControl">
-                <mat-chip #chip="matChip" (click)="chip.toggleSelected()"
-                    *ngFor="let option of ['Option 1', 'Option 2', 'Option 3']">
-                    {{option}}
-                </mat-chip>
-            </mat-chip-list>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-chip-list selectable multiple [formControl]="chipsControl">
-                <mat-chip #chip="matChip" (click)="chip.toggleSelected()"
-                    *ngFor="let option of ['Option 1', 'Option 2', 'Option 3']">
-                    {{option}}
-                </mat-chip>
-            </mat-chip-list>
-        </mat-form-field> -->
+
+                <mat-form-field class="example-chip-list">
+                    <mat-chip-list #chipList aria-label="Fruit selection">
+                      <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
+                               [removable]="removable" (removed)="remove(fruit)">
+                        {{fruit.name}}
+                        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                      </mat-chip>
+                      <input placeholder="Find what You Are Looking For..."
+                             [matChipInputFor]="chipList"
+                             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                             [matChipInputAddOnBlur]="addOnBlur"
+                             (matChipInputTokenEnd)="add($event)">
+                    </mat-chip-list>
+                  </mat-form-field>
+                
         </mat-card-content>
         <mat-card-actions>
             <button (click)="onSubmit()" color="primary" mat-raised-button>
